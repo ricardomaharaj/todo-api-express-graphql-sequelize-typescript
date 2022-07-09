@@ -1,0 +1,20 @@
+
+type Todo {
+    id: ID
+    title: String
+    completed: String
+    createdAt: String
+    updatedAt: String
+}
+
+type Query {
+    findAll: [Todo]
+    findById(id: ID): Todo
+}
+
+type Mutation {
+    create(title: String): Todo
+    update(id: ID, title: String): Todo
+    markComplete(id: ID): Todo
+    delete(id: ID): Todo
+}
